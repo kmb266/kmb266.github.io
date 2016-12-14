@@ -37,7 +37,7 @@
 		</div>-->
 		<ul class="nav nav-tabs" role="tablist">
 		    <li role="presentation" class="active" id='home-nav'><a href="#home">Home</a></li>
-		    <li role="presentation"><a href="#bio" id='bio-nav'>Bio</a></li>
+		    <!--<li role="presentation"><a href="#bio" id='bio-nav'>Bio</a></li>-->
 		    <li role="presentation"><a href="#portfolio" id='portfolio-nav'>Portfolio</a></li>
 		    <li role="presentation"><a href="#contact" id='contact-nav'>Contact</a></li>
 		</ul>
@@ -47,21 +47,91 @@
 	<img class="profile-picture img-responsive center-block" id="main-profile-picture" src="assets/prof-pic-compressed-no-bg.jpg" />
 	<div class="main-wrapper">
 	    <div class="container-fluid">
-		<div class="row first-row" id="home"></div>
+		<div class="row first-row" id="home">
+		    <div class="col-sm-3 col-md-6 col-lg-6 left-column">
+			<h1>Kyle Brown</h1>
+			<p><span id="sub-line">Software Developer | User Experience Designer </span></p>
+		    </div>
+		    <div class="col-sm-9 col-md-6 col-lg-6 right-column" >
+			<p id="intro-p"> Hi I'm Kyle, a student at <span id="pop-out">Cornell University</span> majoring in Information Sciecne concentrating in User Experience Design and Behavioral Science. <br>What that really means is that I love beautiful, intuitive design, iOS app developement, and learning.<br><br>
+			As a software developer and designer I understand the importance of usability and design in websites and applications. In my free time I enjoy creating new web and iOS applications and spending time with my wife and son.</p>
+		    </div>
+		    
+		</div>
 	    </div>
-	    <div class="containter-fluid">
+	    <!--<div class="containter-fluid">
 		<div class="row second-row" id="bio"></div>
 	    </div>
+	    -->
+	    <div class="row third-row" id="portfolio">
+		<h1>Portfolio</h1>
+		<div id="button-titles">
+		<div onclick="showDiv('jottspot')" class="dev-title"><button type="button" class="btn btn-default"><h2>JottSpot Creator</h2></button></div>
+		<div onclick="showDiv('ivyuntold')" class="dev-title"><button type="button" class="btn btn-default"><h2>IvyUntold Designer</h2></div>
+		<div onclick="showDiv('acanela')" class="dev-title"><button type="button" class="btn btn-default"><h2>aCanela Designer</h2></div>
+		</div>
+		<div id='ivyuntold'>
+		    Check out <a href="ivyuntold.com">ivyUntold.com</a>
+		</div>
+		<div id='jottspot'>
+		    <div class="col-md-4">
+			<div class="thumbnail">
+			  <a href="assets/ss1.png">
+			    <img src="assets/ss1.png" alt="JottSpot Login Screen" style="width:100%">
+			    <div class="caption">
+			      <p>Login Screen</p>
+			    </div>
+			  </a>
+			</div>
+		      </div>
+		      <div class="col-md-4">
+			<div class="thumbnail">
+			  <a href="assets/ss2.png">
+			    <img src="assets/ss2.png" alt="JottSpot News Feed" style="width:100%">
+			    <div class="caption">
+			      <p>News Feed</p>
+			    </div>
+			  </a>
+			</div>
+		      </div>
+		      <div class="col-md-4">
+			<div class="thumbnail">
+			  <a href="assets/ss3.png">
+			    <img src="assets/ss3.png" alt="JottSpot Search" style="width:100%">
+			    <div class="caption">
+			      <p>Search</p>
+			    </div>
+			  </a>
+			</div>
+		    </div>
+		</div>
+		
+		<div id="acanela">
+		    Check out <a href="acanela.com">aCanela</a>
+		</div>
+	    </div>
 	    
-	    <div class="row third-row" id="portfolio"></div>
-	    
-	    <div class="row fourth-row" id="contact"></div>
+	    <div class="row fourth-row" id="contact">
+		<h1>Contact</h1>
+		<div class="col-sm-6 col-md-6 col-lg-6 left-column" >
+		    <h3>email: kmb266@cornell.edu</h3>
+		    <h3>phone: (425) 748-4901</h3>
+		</div>
+		<div class="col-sm-6 col-md-6 col-lg-6">
+		
+		</div>
+	    </div>
 	</div>
     </div>
     
   </body>
   
   <script>
+    
+    function showDiv(divID){
+	$("#"+divID).slideToggle();
+    }
+    
     //allow for spring scroll
     //stockoverflow search smooth scrolling jqeury
     $.fn.extend({
@@ -87,6 +157,7 @@
 	      return false;
 	    }
 	  }
+	  return false;
 	});
     });
     
@@ -95,12 +166,7 @@
     
     //load the pages from separate files
     $(function(){
-      $("#home").load("pages/home.html", function() {
 	$('#intro-p').animateCss("slideInRight");
-      });
-      $("#bio").load("pages/bio.html");
-      $("#portfolio").load("pages/portfolio.html");
-      $("#contact").load("pages/contact.html");
     });
    
     //if you're at the top of the page, then these should run, or if they are visible...
