@@ -28,6 +28,7 @@
       
   </head>
   <body data-spy="scroll" data-offset="170" data-target="#navbar">
+    <img class="profile-picture img-responsive center-block" id="main-profile-picture" src="assets/prof-pic-compressed-no-bg.jpg" />
     <div class="body-wrapper">
 	<div class="navbar-wrapper">
 	<nav class="navbar navbar-default navbar-fixed-top" id="main-nav">
@@ -44,7 +45,6 @@
 	    </div>
 	</nav>
 	</div>
-	<img class="profile-picture img-responsive center-block" id="main-profile-picture" src="assets/prof-pic-compressed-no-bg.jpg" />
 	<div class="main-wrapper">
 	    <div class="container-fluid">
 		<div class="row first-row" id="home">
@@ -65,50 +65,7 @@
 	    -->
 	    <div class="row third-row" id="portfolio">
 		<h1>Portfolio</h1>
-		<div id="button-titles">
-		<div onclick="showDiv('jottspot')" class="dev-title"><button type="button" class="btn btn-default"><h2>JottSpot Creator</h2></button></div>
-		<div onclick="showDiv('ivyuntold')" class="dev-title"><button type="button" class="btn btn-default"><h2>IvyUntold Designer</h2></div>
-		<div onclick="showDiv('acanela')" class="dev-title"><button type="button" class="btn btn-default"><h2>aCanela Designer</h2></div>
-		</div>
-		<div id='ivyuntold'>
-		    Check out <a href="ivyuntold.com">ivyUntold.com</a>
-		</div>
-		<div id='jottspot'>
-		    <div class="col-md-4">
-			<div class="thumbnail">
-			  <a href="assets/ss1.png">
-			    <img src="assets/ss1.png" alt="JottSpot Login Screen" style="width:100%">
-			    <div class="caption">
-			      <p>Login Screen</p>
-			    </div>
-			  </a>
-			</div>
-		      </div>
-		      <div class="col-md-4">
-			<div class="thumbnail">
-			  <a href="assets/ss2.png">
-			    <img src="assets/ss2.png" alt="JottSpot News Feed" style="width:100%">
-			    <div class="caption">
-			      <p>News Feed</p>
-			    </div>
-			  </a>
-			</div>
-		      </div>
-		      <div class="col-md-4">
-			<div class="thumbnail">
-			  <a href="assets/ss3.png">
-			    <img src="assets/ss3.png" alt="JottSpot Search" style="width:100%">
-			    <div class="caption">
-			      <p>Search</p>
-			    </div>
-			  </a>
-			</div>
-		    </div>
-		</div>
 		
-		<div id="acanela">
-		    Check out <a href="acanela.com">aCanela</a>
-		</div>
 	    </div>
 	    
 	    <div class="row fourth-row" id="contact">
@@ -174,10 +131,11 @@
 	$('#main-profile-picture').animateCss("fadeInLeft");
     }
     
-    
-    //css for the picture to set it on the bottom of the page
-    $(function() {
-	var marginTop = $(window).height() - $("#main-profile-picture").height() + 2;
+    $( window ).on('load',function() {
+	//css for the picture to set it on the bottom of the page
+	var marginTop = $(window).height() - $("#main-profile-picture").height() +2 ;
+	console.log($(window).height(), "window-height");
+	console.log($("#main-profile-picture").height(), "picture-height");
 	$("#main-profile-picture").css("margin-top", marginTop);
     });
     
