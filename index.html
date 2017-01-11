@@ -54,7 +54,7 @@
 		    </div>
 		    <div class="col-sm-9 col-md-6 col-lg-6 right-column" >
 			<p id="intro-p"> Hi I'm Kyle, a student at <span id="pop-out">Cornell University</span> majoring in Information Sciecne concentrating in User Experience Design and Behavioral Science. <br>What that really means is that I love beautiful, intuitive design, iOS app developement, and learning.<br><br>
-			As a software developer and designer I understand the importance of usability and design in websites and applications. In my free time I enjoy creating new web and iOS applications and spending time with my wife and son.</p>
+			As a software developer and designer I understand the importance of usability and design in websites and applications. In my free time I enjoy creating new web and iOS applications and spending time with my wife and son. <br><br><a href="assets/Resume.pdf" target="_blank"><button class="btn btn-default" id="resume">View Resume</button></a></p>
 		    </div>
 		    
 		</div>
@@ -65,18 +65,79 @@
 	    -->
 	    <div class="row third-row" id="portfolio">
 		<h1>Portfolio</h1>
+		<div class="row inner-row">
+		    <div class="col-sm-6 col-md-6 col-lg-6 left-column" >
+			<img src="assets/logo-words-S.png" style="width: 245px; padding-bottom:8px;">
+			<p id="p-gr">JottSpot is a location based social media iOS application I developed based on an idea my brother had while sitting in a lecture during Medical School. Based on a user's location, they can view posts in a half kilometer radius. When they post, they leave that picture behind where they physically were when posting. <br><br> Written in Swift, I was the sole developer on the application which will go live on the AppStore in February 2017.</p>
+		    <!--<a href="itunes-ref" target="_blank"><button class="btn btn-default">View in AppStore</button></a>-->
+		    </div>
+		    
+		    <div class="col-sm-6 col-md-6 col-lg-6 inner-right-column" >
+			<div class="col-md-4">
+			    <a href="assets/ss1.png" target="_blank" class="thumbnail">
+				<img src="assets/ss1.png" alt="JottSpot Screenshot" class="jott-pic">
+			    </a>
+			</div>
+			<div class="col-md-4">
+			    <a href="assets/ss2.png" target="_blank" class="thumbnail">
+				<img src="assets/ss2.png" alt="JottSpot Screenshot" class="jott-pic">
+			    </a>
+			</div><div class="col-md-4">
+			    <a href="assets/ss4.png" target="_blank" class="thumbnail">
+				<img src="assets/ss4.png" alt="JottSpot Screenshot" class="jott-pic">
+			    </a>
+			</div>
+			<p id="jott-caption"> Click the images to see them larger</p>
+		    </div>
+		</div>
+		
+		<div class="row inner-row">
+		    <div class="col-sm-6 col-md-6 col-lg-6 left-column">
+			<h2>Graphics Request System</h2>
+			<p id="p-gr">Lorem ipsum dolor sit amet, nec ea persius comprehensam, pro ne singulis iracundia. Ei his error audiam, nec accusam pertinax no. His unum ocurreret ea, cum et deserunt sapientem salutandi, quis labores no mea.</p>
+			
+		    </div>
+		    <div class="col-sm-6 col-md-6 col-lg-6 inner-right-column" >
+			<a href="demos/graphics_request.html" target="_blank" class="thumbnail">
+			    <img src="assets/request-system-1.png" alt="Graphics Requests System Picture" class="port-pic">
+			</a>
+			<p style="text-align: center;">Click to see a live demo of the site.</p>
+		    </div>
+		</div>
+		
+		<div class="row inner-row">
+		    <div id="unknown">
+			<h2>Web Design</h2>
+			<p id="p-gr">I designed several websites (including this one using Bootstrap) to the owners specifications, hoping to display simplicity, and elegant design, while empowering the owners to add content on their own. </p>
+			<div class="col-md-6">
+			    <a href="http://acanela.com" target="_blank" class="thumbnail">
+				<img src="assets/ss-acanela.png" alt="aCanela.com Screenshot" class="web-pic">
+			    </a>
+			</div>
+			<div class="col-md-6">
+			    <a href="http://ivyuntold.com" target="_blank" class="thumbnail">
+				<img src="assets/ss-ivyuntold1.png" alt="ivyUntold.com Screenshot" class="web-pic">
+			    </a>
+			</div>
+		    </div>
+		</div>
 		
 	    </div>
 	    
-	    <div class="row fourth-row" id="contact">
-		<h1>Contact</h1>
-		<div class="col-sm-6 col-md-6 col-lg-6 left-column" >
-		    <h3>email: kmb266@cornell.edu</h3>
-		    <h3>phone: (425) 748-4901</h3>
-		</div>
-		<div class="col-sm-6 col-md-6 col-lg-6">
-		
-		</div>
+	    <div class="fourth-row" id="contact">
+		<h2>Kyle Brown</h2>
+		<table class="contact-table">
+		<tbody>
+		    <tr>
+			<td class="iconTD"><img src="assets/email.png" alt="email: " class="icon"></td>
+			<td><h3>kmb266@cornell.edu</h3></td>
+		    </tr>
+		    <tr>
+			<td class="iconTD"><img src="assets/phone.png" alt="phone: " class="icon"></td>
+			<td><h3>(425) 748-4901</h3></td>
+		    </tr>
+		</tbody>
+		</table>
 	    </div>
 	</div>
     </div>
@@ -133,9 +194,9 @@
     
     $( window ).on('load',function() {
 	//css for the picture to set it on the bottom of the page
-	var marginTop = $(window).height() - $("#main-profile-picture").height() +2 ;
-	console.log($(window).height(), "window-height");
-	console.log($("#main-profile-picture").height(), "picture-height");
+	$(".first-row").css("height", $(window).height);
+	var marginTop = $(window).height() - $("#main-profile-picture").height() + 12 ;
+	
 	$("#main-profile-picture").css("margin-top", marginTop);
     });
     

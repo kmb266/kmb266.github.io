@@ -70,17 +70,21 @@ h1 {
 }
 
 .profile-picture {
-    width: 45%;
+    width: 620px;
     z-index: -100;
     margin-left:40px;
     position: absolute;
+}
+
+#resume {
+    margin-left: 40px;
+    font-size: 18px;
 }
 /*END hero Styling*/
 
 /*First row style*/
 .row {
     width: 100%;
-    min-height: 95vh;
     padding-top: 2em;
 }
 
@@ -90,7 +94,7 @@ h1 {
 }
 
 .left-column p {
-    text-align: center;
+    
 }
 .right-column {
     line-height: 2em;
@@ -128,25 +132,68 @@ h1 {
 
 /*END SECOND ROW*/
 
-/*Thrid Row*/
+/*Thrid Row Style*/
 
 .third-row {
     
 }
-
-#jottspot, #ivyuntold, #acanela {
-    display: none;
-    padding: 8px;
+.third-row p {
+    text-align: left;
+}
+.inner-row {
+    padding-top: 3em;
+    padding-bottom: 1em;
+    border-bottom: solid #ddd 1px;
 }
 
-#button-titles {
-    margin: auto;
+.port-pic {
     width: 100%;
 }
 
-.dev-title {
-    margin-right: 20px;
-    cursor: pointer;
+/*jottspot styling*/
+.jott-pic {
+    width: 100%;
+}
+#jott-caption {
+    text-align: center;
+    margin-top: -14px;;
+    padding: 0;
+}
+
+
+/*End 3rd row Style*/
+
+/*fourth row (contact) style*/
+.fourth-row  {
+    padding-top: 1em;
+    height: 325px;
+    text-align: center;
+}
+
+.fourth-row h2 {
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.fourth-row h3 {
     display: inline-block;
-    padding: 4px;
+}
+
+.icon {
+    display: inline-block;
+    width: 50px;
+}
+
+.contact-table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+.contact-table td{
+    padding: 8px;
+}
+.iconTD {
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
 }
